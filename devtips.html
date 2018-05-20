@@ -14,20 +14,20 @@
 </div>
 
 <script type="module">
-    import d from './d.js'
+    import t from './t.js'
     //Example 1
-    d('#example-1-button').on('click', () => {alert('nay query')})
+    t('#example-1-button').on('click', () => {alert('nay query')})
 
     //Example 2
-    d(() => {d('#example-2-text').value = 'DOM is ready'})
+    t(() => {t('#example-2-text').value = 'DOM is ready'})
 
     //Example 3
-    let address = d('#api-address').value
-    d('#example-3-button')
+    let address = t('#api-address').value
+    t('#example-3-button')
         .on('click', () => {
-            d.json(address)
+            t.json(address)
                 .then(json => {
-                    d('#example-3-text').value = json.results[0].name.first
+                    t('#example-3-text').value = json.results[0].name.first
                 })
         })
 

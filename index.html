@@ -3,14 +3,14 @@
 <div name="byName"></div>
 
 <script type="module">
-    import d from './d.js'
+    import t from './t.js'
 
-    d(() => {
+    t(() => {
         console.log('ready')
     })
-    let byId = d('#byId')
-    let byClass = d('.byClass')
-    let byName = d('[name="byName"]')
+    let byId = t('#byId')
+    let byClass = t('.byClass')
+    let byName = t('[name="byName"]')
 
     console.log(byId)
     console.log(byClass)
