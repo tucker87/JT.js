@@ -5,7 +5,7 @@ let t = v => {
     if(typeof v === "function")
         document.addEventListener('DOMContentLoaded', v)
 }
-t.json = url => fetch(url).then(r => r.json())
+t.fetchJson = url => fetch(url).then(r => r.json())
 HTMLElement.prototype.on = HTMLElement.prototype.addEventListener
 
 export default t
