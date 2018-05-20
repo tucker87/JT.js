@@ -1,6 +1,6 @@
 # Tjs
 
-This is a small utility for allowing using of jQuery-like syntax.
+This is a small utility for allowing the use of jQuery-like syntax.
 
 ## document.ready
 
