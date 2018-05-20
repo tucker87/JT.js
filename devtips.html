@@ -1,0 +1,43 @@
+<div class="example" id="example-1">
+    <h3>Example 1</h3>
+    <input type="button" id="example-1-button" value="selector"/>
+</div>
+<div class="example" id="example-2">
+    <h3>Example 2</h3>
+    <input id="example-2-text">
+</div>
+<div class="example" id="example-3">
+    <h3>Example 3</h3>
+    <input type="button" id="example-3-button" value="fetch"/>
+    <input id="example-3-text"/>
+    <input id="api-address" value="https://randomuser.me/api/">
+</div>
+
+<script type="module">
+    import d from './d.js'
+    //Example 1
+    d('#example-1-button').on('click', () => {alert('nay query')})
+
+    //Example 2
+    d(() => {d('#example-2-text').value = 'DOM is ready'})
+
+    //Example 3
+    let address = d('#api-address').value
+    d('#example-3-button')
+        .on('click', () => {
+            d.json(address)
+                .then(json => {
+                    d('#example-3-text').value = json.results[0].name.first
+                })
+        })
+
+</script>
+
+<style>
+    .example {
+        margin: 15px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 10px;
+    }
+</style>

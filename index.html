@@ -1,0 +1,18 @@
+<div id="byId"></div>
+<div class="byClass"></div>
+<div name="byName"></div>
+
+<script type="module">
+    import d from './d.js'
+
+    d(() => {
+        console.log('ready')
+    })
+    let byId = d('#byId')
+    let byClass = d('.byClass')
+    let byName = d('[name="byName"]')
+
+    console.log(byId)
+    console.log(byClass)
+    console.log(byName)
+</script>
