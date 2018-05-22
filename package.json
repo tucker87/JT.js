@@ -4,7 +4,14 @@
   "description": "jQuery like shortcuts",
   "main": "t.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/eslint ./t.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/tucker87/Tjs/issues"
   },
-  "homepage": "https://github.com/tucker87/Tjs#readme"
+  "homepage": "https://github.com/tucker87/Tjs#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2"
+  }
 }
